@@ -1,4 +1,3 @@
-# Correct and regenerate the Streamlit app with proper multiline string formatting
 streamlit_code = """
 import streamlit as st
 import pandas as pd
@@ -37,18 +36,17 @@ st.markdown("### Expected Returns")
 edited_df["Expected Return"] = edited_df["Lottery Prize"] * (1/20) - edited_df["Entry Fee"]
 st.dataframe(edited_df)
 
-st.markdown("### Strategy Discussion")
 st.markdown("""
+### Strategy Discussion
 - Which bonds offer the highest expected return?
 - How would you allocate a budget to maximize profit?
 - What changes would prevent exploitation like Voltaire's?
 """)
 """
 
-# Save corrected Streamlit app to file
 with open("voltaire_lottery_app.py", "w") as f:
     f.write(streamlit_code)
 
-print("Corrected Streamlit app 'voltaire_lottery_app.py' has been created.")aw, and analyze expected returns.
+print("Corrected Streamlit app 'voltaire_lottery_app.py' has been created.")
 
 ## Installation

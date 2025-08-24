@@ -7,12 +7,10 @@ st.set_page_config(page_title='Voltaire Bond Lottery Simulation', layout='wide')
 
 st.title("Voltaire's Bond Lottery Exploitation")
 
-st.markdown("""
-### Introduction
+st.markdown("""### Introduction
 In 18th-century France, Voltaire discovered a mathematical flaw in a government bond lottery. The lottery allowed bondholders to enter for a fixed fee, regardless of the bond's market value. Voltaire and mathematician La Condamine exploited this by buying undervalued bonds and repeatedly winning large prizes.
 
-This app simulates that scenario with fictional bonds. You can edit the bond values, simulate a lottery draw, and analyze expected returns.
-""")
+This app simulates that scenario with fictional bonds. You can edit the bond values, simulate a lottery draw, and analyze expected returns.""")
 
 st.markdown("### Edit Bond Table")
 
@@ -36,12 +34,10 @@ st.markdown("### Expected Returns")
 edited_df["Expected Return"] = edited_df["Lottery Prize"] * (1/20) - edited_df["Entry Fee"]
 st.dataframe(edited_df)
 
-st.markdown("""
-### Strategy Discussion
+st.markdown("""### Strategy Discussion
 - Which bonds offer the highest expected return?
 - How would you allocate a budget to maximize profit?
-- What changes would prevent exploitation like Voltaire's?
-""")
+- What changes would prevent exploitation like Voltaire's?""")
 """
 
 with open("voltaire_lottery_app.py", "w") as f:
